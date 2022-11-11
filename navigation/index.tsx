@@ -38,11 +38,11 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
+      <Stack.Navigator>
+      <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} /> 
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
-        <Stack.Screen name="Modal" component={ModalScreen} />
+      <Stack.Screen name="Modal" component={ModalScreen} />
       </Stack.Group>
     </Stack.Navigator>
   );
@@ -67,15 +67,14 @@ function BottomTabNavigator() {
         name="Home"
         component={TabOneScreen}
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <AntDesign name="home" size={24} color={color} />,
+            tabBarIcon: ({ color }) => <AntDesign name="home" size={24} color={color}/>,
         }}
       />
       <BottomTab.Screen
         name="ComingSoon"
         component={TabTwoScreen}
         options={{
-          title: 'Coming Soon',
+          title: "Coming Soon",
           tabBarIcon: ({ color }) => <MaterialIcons name="video-library" size={24} color={color} />,
         }}
       />
@@ -83,8 +82,8 @@ function BottomTabNavigator() {
         name="Search"
         component={TabTwoScreen}
         options={{
-          title: 'Search',
-          tabBarIcon: ({ color }) => <Ionicons name="search" size={24} color={color} />,
+            title: "Search",
+            tabBarIcon: ({ color }) => <Ionicons name="search" size={24} color={color} />,
         }}
       />
       <BottomTab.Screen
@@ -105,6 +104,7 @@ function BottomTabNavigator() {
 function TabBarIcon(props: {
   name: React.ComponentProps<typeof FontAwesome>['name'];
   color: string;
-}) {
+})
+ {
   return <FontAwesome size={30} style={{ marginBottom: -3 }} {...props} />;
 }
