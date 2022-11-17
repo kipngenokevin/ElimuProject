@@ -1,12 +1,12 @@
 import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
     container: {
-        padding:10,
+        padding:20,
         flex: 1
     },
     heroSection:{
-        height:'60%',
-        //padding:20,
+        flex: 1,
+        height: 200
     },
     heroImage: {
         flex: 1,
