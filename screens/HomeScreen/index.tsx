@@ -23,6 +23,7 @@ export default function HomeScreen({ navigation }: RootTabScreenProps<"Home">) {
           <FlatList style={styles.container}
             data={categories.items}
             renderItem={({item}) =><HomeCategory category={item}/>}
+            showsVerticalScrollIndicator={false}
           />
         
       

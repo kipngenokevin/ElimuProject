@@ -32,7 +32,8 @@ const styles = StyleSheet.create({
         padding: 2
     },
     image: {
-        margin: 2,        
+        margin: 2,  
+        flex: 1,      
         width: 120,
         height: 160,
         resizeMode: 'cover',

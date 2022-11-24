@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
         margin: 2,        
         width: 120,
         height: 160,
+        flex: 1,
         resizeMode: 'cover',
         borderRadius: 12
     }

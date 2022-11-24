@@ -29,6 +29,7 @@ export type RootTabParamList = {
   ComingSoon: undefined;
   Search: undefined;
   Downloads: undefined;
+  MovieDetailsScreen: undefined;
 };
 
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<

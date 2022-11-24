@@ -17,6 +17,7 @@ import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import TabOneScreen from '../screens/HomeScreen/index';
 import TabTwoScreen from '../screens/TabTwoScreen';
+import MovieDetailsScreen from '../screens/MovieDetailsScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 
@@ -69,12 +70,21 @@ function BottomTabNavigator() {
         },
       }}>
       <BottomTab.Screen
+        name="MovieDetailsScreen"
+        component={MovieDetailsScreen}
+        options={{  
+            headerShown:true,
+            title:'',        
+            tabBarIcon: ({ color }) => <AntDesign name="home" size={24} color={color}/>,
+        }}
+      />
+      {/*<BottomTab.Screen
         name="Home"
         component={TabOneScreen}
         options={{           
             tabBarIcon: ({ color }) => <AntDesign name="home" size={24} color={color}/>,
         }}
-      />
+      />*/}
       <BottomTab.Screen
         name="ComingSoon"
         component={TabTwoScreen}
