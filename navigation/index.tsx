@@ -74,7 +74,7 @@ function BottomTabNavigator() {
         component={MovieDetailsScreen}
         options={{  
             headerShown:true,
-            title:'',        
+            title:'Home',        
             tabBarIcon: ({ color }) => <AntDesign name="home" size={24} color={color}/>,
         }}
       />
