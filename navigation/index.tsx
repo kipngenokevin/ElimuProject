@@ -15,7 +15,7 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
-import TabOneScreen from '../screens/HomeScreen/index';
+import HomeScreen from '../screens/HomeScreen/index';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import MovieDetailsScreen from '../screens/MovieDetailsScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
@@ -40,10 +40,11 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 function RootNavigator() {
   return (
       <Stack.Navigator>
-      <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} /> 
+      <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />      
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
       <Stack.Screen name="Modal" component={ModalScreen} />
+      <Stack.Screen name="MovieDetailsScreen" component={MovieDetailsScreen}/>
       </Stack.Group>
     </Stack.Navigator>
   );
@@ -70,8 +71,8 @@ function BottomTabNavigator() {
         },
       }}>
       <BottomTab.Screen
-        name="MovieDetailsScreen"
-        component={MovieDetailsScreen}
+        name="Home"
+        component={HomeScreen}
         options={{  
             headerShown:true,
             title:'Home',        
