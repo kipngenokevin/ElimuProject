@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-elimuproject-dev-144213-authRole",
+      "UnauthRoleArn": "arn:aws:iam::486287103898:role/amplify-elimuproject-dev-144213-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::486287103898:role/amplify-elimuproject-dev-144213-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-elimuproject-dev-144213-deployment",
+      "UnauthRoleName": "amplify-elimuproject-dev-144213-unauthRole",
+      "StackName": "amplify-elimuproject-dev-144213",
+      "StackId": "arn:aws:cloudformation:eu-west-2:486287103898:stack/amplify-elimuproject-dev-144213/b60b6280-6f11-11ed-b324-02d3a9e92a38",
+      "AmplifyAppId": "d3j7osvw8ya1rt"
+    }
+  }
+}
