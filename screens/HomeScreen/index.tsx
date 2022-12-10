@@ -23,6 +23,15 @@ export default function HomeScreen({ navigation }: RootTabScreenProps<"Home">) {
           <FlatList style={styles.container}
             data={categories.items}
             renderItem={({item}) =><HomeCategory category={item}/>}
+            ListHeaderComponent={
+              <View>
+                <Image
+                  style={styles.heroImage}
+                  source={{uri:'https://img.freepik.com/premium-vector/children-education_29937-3040.jpg?size=626&ext=jpg'}}
+              />
+
+            </View>
+            }
             showsVerticalScrollIndicator={false}
           />
         

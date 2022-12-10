@@ -10,6 +10,11 @@
       "StackName": "amplify-elimuproject-dev-144213",
       "StackId": "arn:aws:cloudformation:eu-west-2:486287103898:stack/amplify-elimuproject-dev-144213/b60b6280-6f11-11ed-b324-02d3a9e92a38",
       "AmplifyAppId": "d3j7osvw8ya1rt"
+    },
+    "categories": {
+      "auth": {
+        "elimuproject53e80aa9": {}
+      }
     }
   }
 }

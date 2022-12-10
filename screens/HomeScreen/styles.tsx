@@ -2,26 +2,16 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
     container: {
         padding:10,
-        flex: 1
+        flex: 1,
     },
     heroSection:{
-        height:'60%',
+        height:'20%',
         //padding:20,
     },
     heroImage: {
-        flex: 1,
+        height: 200,
         borderRadius: 4,
-        resizeMode: 'cover'
-    },
-    heroGrid: {
-        padding: 20,
-        height: 100,
-    },
-    heroButton:{
-        width: 100,
-        borderRadius: 8,    
-        shadowColor: '#042'
-        
+        resizeMode: 'cover',
     },
     categories:{
          padding: 10
