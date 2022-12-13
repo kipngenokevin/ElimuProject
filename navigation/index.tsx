@@ -20,6 +20,7 @@ import TabTwoScreen from '../screens/TabTwoScreen';
 import MovieDetailsScreen from '../screens/MovieDetailsScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
+import profile from '../screens/profile';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -78,36 +79,21 @@ function BottomTabNavigator() {
             title:'Home',        
             tabBarIcon: ({ color }) => <AntDesign name="home" size={24} color={color}/>,
         }}
-      />
-      {/*<BottomTab.Screen
-        name="Home"
-        component={TabOneScreen}
-        options={{           
-            tabBarIcon: ({ color }) => <AntDesign name="home" size={24} color={color}/>,
-        }}
-      />*/}
-      <BottomTab.Screen
-        name="ComingSoon"
-        component={TabTwoScreen}
-        options={{
-          title: "Coming Soon",
-          tabBarIcon: ({ color }) => <MaterialIcons name="video-library" size={24} color={color} />,
-        }}
-      />
+      />  
       <BottomTab.Screen
         name="Search"
         component={TabTwoScreen}
         options={{
-            title: "Search",
-            tabBarIcon: ({ color }) => <Ionicons name="search" size={24} color={color} />,
+          title: 'Explore',
+          tabBarIcon: ({ color }) => <MaterialIcons name="explore" size={24} color={color} />,
         }}
-      />
+      />  
       <BottomTab.Screen
         name="Downloads"
-        component={TabTwoScreen}
+        component={profile}
         options={{
-          title: 'Downloads',
-          tabBarIcon: ({ color }) => <AntDesign name="download" size={24} color={color} />,
+          title: 'Profile',
+          tabBarIcon: ({ color }) => <MaterialIcons name="person" size={24} color={color} />,
         }}
       />
     </BottomTab.Navigator>
