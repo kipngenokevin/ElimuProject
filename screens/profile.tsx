@@ -6,11 +6,23 @@ import {
   Image,
   ScrollView,
   ImageBackground,
+  Pressable,
 } from "react-native";
 import styles from "./profilestyles";
-import { Ionicons, MaterialIcons } from "@expo/vector-icons";
+import { FontAwesome, Ionicons, MaterialIcons } from "@expo/vector-icons";
+
+import { Auth } from "aws-amplify";
 
 export default function App() {
+
+  const onLogout = () =>{
+      Auth.signOut();
+  }
+
+  const onEditProfile = () =>{
+    Auth.configure();
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
@@ -32,7 +44,39 @@ export default function App() {
           </View>
         </View>
         <View style={styles.bodySection}>
-
+          <View style={styles.buttonSection}>
+          <Pressable
+            onPress={() => {
+              Auth.currentUserInfo();
+            }}
+            style={styles.playButton}
+          >
+            <Text style={styles.playButtonText}>
+              {" "}
+              <FontAwesome name="gear" size={23} color="black" /> Edit Profile{" "}
+            </Text>
+          </Pressable>
+          <Pressable
+            onPress={() => {
+              console.warn("Play");
+            }}
+            style={styles.playButton}
+          >
+            <Text style={styles.playButtonText}>
+              {" "}
+              <FontAwesome name="heart" size={23} color="black" /> Favorites{" "}
+            </Text>
+          </Pressable>
+          <Pressable
+            onPress={onLogout}
+            style={styles.playButton}
+          >
+            <Text style={styles.playButtonText}>
+              {" "}
+              <FontAwesome name="sign-out" size={23} color="black" /> Logout {" "}
+            </Text>
+          </Pressable>
+          </View>
         </View>
       </ScrollView>
     </SafeAreaView>
